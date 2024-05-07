@@ -3,6 +3,7 @@ const UserCtrl = require('../controllers/user-ctrl');
 const router = express.Router();
 
 router.post('/user/auth', UserCtrl.checkUserAuth);
-router.get('/', UserCtrl.checkServiceRunning);
+
+router.post('/create-user', UserCtrl.createUser);
 
 module.exports = router;
